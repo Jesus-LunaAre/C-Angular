@@ -1,0 +1,29 @@
+<div class="contenido">
+  <h3>Listado de heroes</h3>
+  <ul class="mt-2 list-group">
+    <li
+    *ngFor="let hero of HeroNames"
+    class="list-group-item"> <strong> {{ hero }} </strong>
+    </li>
+  </ul>
+  <div class="control">
+    <button
+    *ngIf="HeroNames.length !== 0"
+    (click)="rmHero()">Eliminar Heroe</button>
+  </div>
+
+  <h4
+  *ngIf="HeroNames.length !== 0; else condicion"
+  >
+    Heroe eliminado:
+    <small>
+      {{heroRm}}
+    </small>
+  </h4>
+
+  <ng-template #condicion>
+    <h4> No hay mas heroes por borrar</h4>
+  </ng-template>
+
+
+</div>

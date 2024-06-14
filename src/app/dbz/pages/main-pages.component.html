@@ -1,0 +1,19 @@
+
+<div class="contenido">
+
+  <div class="row">
+
+    <div class="col">
+      <app-dbz-list
+      (onDeleteID)="onDeleteCharacter($event)"
+      [characterList]="characters" ></app-dbz-list>
+    </div>
+
+    <div class="col">
+      <app-dbz-addCharacter (onCharacter)="onNewCharacter($event)" ></app-dbz-addCharacter>
+    </div>
+
+  </div>
+
+</div>
+
